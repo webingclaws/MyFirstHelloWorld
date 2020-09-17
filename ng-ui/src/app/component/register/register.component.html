@@ -1,28 +1,32 @@
 <div>
-  <div>
-    <span>firstname: </span>
-    <input type="text" placeholder="enter firstname" [(ngMode1)] ="staff.firstname"/>
-  </div>
+  <form>
+
+    <div>
+      <span>firstname: </span>
+      <input type="text" class="form-control" placeholder="enter firstname" [(ngModel)]="staff.firstname" name="Firstname" />
+    </div>
+    <div>
+      <span>lastname: </span>
+      <input type="text" class="form-control" placeholder="enter lastname" [(ngModel)]="staff.lastname" name="lastname" />
+    </div>
+    <div>
+      <span>bod: </span>
+      <input type="text" class="form-control" placeholder="enter bod" [(ngModel)]="staff.bod" name="bod" />
+    </div>
+    <div>
+      <span>education: </span>
+      <input type="text" class="form-control" placeholder="enter education" [(ngModel)]="staff.education" name="education" />
+    </div>
+    <div>
+      <span>state of orgin: </span>
+      <input type="text" class="form-control" placeholder="enter state of origin" [(ngModel)]="staff.soo" name="soo" />
+    </div>
+    <div>
+      <span>religion: </span>
+      <input type="text" class="form-control" placeholder="enter religion" [(ngModel)]="staff.religion" name="religion" />
+    </div>
+    <button class="btn btn-primary"> submit</button>
+  </form>
 </div>
-<div>
-  <span>lastname: </span>
-  <input type="text" placeholder="enter lastname" [(ngMode1)] ="staff.lastname"/>
-</div>
-<div>
-  <span>bod: </span>
-  <input type="text" placeholder="enter bod" [(ngMode1)] ="staff.bod"/>
-</div>
-<div>
-  <span>education: </span>
-  <input type="text" placeholder="enter education" [(ngMode1)] ="staff.education"/>
-</div>
-<div>
-  <span>state of orgin: </span>
-  <input type="text" placeholder="enter state of origin" [(ngMode1)] ="staff.soo"/>
-</div>
-<div>
-  <span>religion: </span>
-  <input type="text" placeholder="enter religion" [(ngMode1)] ="staff.religion"/>
-</div>
-<button> submit</button>
-</div>
+
+ 

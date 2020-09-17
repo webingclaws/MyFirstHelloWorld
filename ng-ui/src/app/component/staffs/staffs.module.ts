@@ -24,4 +24,4 @@ import { StaffsComponent } from './staffs.component';
   entryComponents: [
   ]
 })
-export class RegisterModule { }
+export class StaffsModule { }
