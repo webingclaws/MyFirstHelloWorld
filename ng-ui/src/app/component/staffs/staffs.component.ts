@@ -9,6 +9,18 @@ import { Router } from '@angular/router';
 export class StaffsComponent implements OnInit, OnDestroy {
   staffs: any = [];
   constructor(public router: Router) {
+    //<td>{{staff.}}</td><td>{{staff.lastname}}</td><td>{{staff.bod}}</td><td>{{staff.education}}</td><td>{{staff.soo}}</td><td>{{staff.religion}}</td></tr>
+    this.staffs = [
+      {
+       firstname: "Tola", lastname: "Adeboye", bod: "23-07-1999", education: "University", soo: "Ogun", religion: "Christianity"
+      },
+      {
+        firstname: "Tola", lastname: "Adeboye", bod: "23-07-1999", education: "University", soo: "Ogun", religion: "Christianity"
+      },
+      {
+       firstname: "Tola", lastname: "Adeboye", bod: "23-07-1999", education: "University", soo: "Ogun", religion: "Christianity"
+      }
+    ]
 
   }
   ngOnInit() {
