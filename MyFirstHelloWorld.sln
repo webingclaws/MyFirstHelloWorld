@@ -21,15 +21,25 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "ng-ui", "ng-ui\", "{2BC0565
 		Release.AspNetCompiler.FixedNames = "false"
 		Release.AspNetCompiler.Debug = "False"
 		VWDPort = "56030"
+		SlnRelativePath = "ng-ui\"
 	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Backend", "Backend\Backend.csproj", "{7E3AF78F-5EAB-428B-8459-DC5FB3B77A88}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{2BC0565F-1561-4B04-A13E-7C145C1CEF8F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{2BC0565F-1561-4B04-A13E-7C145C1CEF8F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2BC0565F-1561-4B04-A13E-7C145C1CEF8F}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{2BC0565F-1561-4B04-A13E-7C145C1CEF8F}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{7E3AF78F-5EAB-428B-8459-DC5FB3B77A88}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7E3AF78F-5EAB-428B-8459-DC5FB3B77A88}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7E3AF78F-5EAB-428B-8459-DC5FB3B77A88}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7E3AF78F-5EAB-428B-8459-DC5FB3B77A88}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
