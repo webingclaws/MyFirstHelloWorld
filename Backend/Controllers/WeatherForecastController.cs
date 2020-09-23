@@ -24,7 +24,7 @@ namespace Backend.Controllers
         }
 
         [HttpGet]
-        public IEnumerable<WeatherForecast> Get()
+        public WeatherForecast[] Get()
         {
             var d = new Dictionary<string, string> { { "FirstName", "Tola" }, { "LastName", "Adeboye" } };
             var rng = new Random();
