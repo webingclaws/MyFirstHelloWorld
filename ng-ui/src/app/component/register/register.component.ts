@@ -1,16 +1,18 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Router } from '@angular/router';
+import { HttpServices } from '../../services/HttpServices';
 
 @Component({
   selector: 'register-comp',
   templateUrl: './register.component.html',
-  styleUrls: ['./register.component.css']
+  styleUrls: ['./register.component.css'],
+  providers: [HttpServices]
 })
 
 export class RegisterComponent implements OnInit, OnDestroy
 {
   staff: any ={ };
-  constructor(public router: Router) {
+  constructor(public services: HttpServices, public router: Router) {
 
   }
   ngOnInit()
