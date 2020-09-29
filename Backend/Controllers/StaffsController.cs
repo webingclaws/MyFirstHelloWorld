@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Backend.Tola;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -13,8 +14,10 @@ namespace Backend.Controllers
     
     {
         private List<Dictionary<string, string>> _staffs;
+        private Toys _toys;
         public StaffsController()
         {
+            _toys = new Toys("Green",5);
             _staffs = new List<Dictionary<string, string>>
             {
                 new Dictionary<string, string>
@@ -35,8 +38,14 @@ namespace Backend.Controllers
         {
             return await Task.Run(() => _staffs);
         }
+        //[Route("submit")]
+        [HttpGet]
+        public async Task<string> GetToys()
+        {
+            //TODO: save to database
+            return await Task.Run(() => _toys.Bag());
+        }
 
 
-
-     }
+    }
 }

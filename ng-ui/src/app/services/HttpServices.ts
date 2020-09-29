@@ -18,11 +18,11 @@ export class HttpServices {
   constructor(private http: HttpClient) {
   }
   public registerData(data: string): Observable<any> {
-    return this.http.post('https://localhost:44359/service/register/submit', data, this.httpOption)
+    return this.http.post('http://localhost:5000/service/register/submit', data, this.httpOption)
       .pipe(catchError(this.handlerError));
   }
   public getStaffs(): Observable<any> {
-    return this.http.get('https://localhost:44359/service/staffs/get', this.httpOption)
+    return this.http.get('http://localhost:5000/service/staffs/get', this.httpOption)
       .pipe(catchError(this.handlerError));
   }
   private handlerError(error: Response) {

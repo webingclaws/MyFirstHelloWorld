@@ -1,4 +1,7 @@
-﻿namespace Backend. Tola
+﻿using System;
+using System.Text.Json;
+
+namespace Backend. Tola
 {
     public class Toys
     {
@@ -19,6 +22,12 @@
             ~Toys() { 
         
         }
-}
+        public string Bag()
+        {
+           //in place of database query
+            return $"Color: {Color}, Legs: {Legs}, Time: {DateTime.Now}";
+        }
+    }
+
 
 }

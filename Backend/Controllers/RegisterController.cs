@@ -12,13 +12,26 @@ namespace Backend.Controllers
     [ApiController]
     public class RegisterController : ControllerBase
     {
-        [Route("submit")]
+        //[Route("submit")]
         [HttpPost]
         public async Task<string> Register([FromBody] Dictionary<string, string> payload)
         {
            //TODO: save to database
             return await Task.Run(()=> JsonSerializer.Serialize(payload));
         }
-
+        //[Route("submit")]
+        [HttpGet]
+        public async Task<string> Get()
+        {
+            //TODO: save to database
+            return await Task.Run(() => "Hello World");
+        }
+        [Route("Get2")]
+        [HttpGet]
+        public async Task<string> Get2()
+        {
+            //TODO: save to database
+            return await Task.Run(() => "Hello World 2");
+        }
     }
 }
