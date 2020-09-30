@@ -17,7 +17,8 @@ namespace Backend.Controllers
         private Toys _toys;
         public StaffsController()
         {
-            _toys = new Toys("Green",5);
+            //_toys = new Toys("Green",5);
+            _toys = new Toys();
             _staffs = new List<Dictionary<string, string>>
             {
                 new Dictionary<string, string>
