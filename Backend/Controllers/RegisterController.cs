@@ -17,21 +17,14 @@ namespace Backend.Controllers
         private SqlConnection _connection;
         public RegisterController()
         {
-            _connection = new SqlConnection("DESKTOP-D2JHR9D\\SQLEXPRESS;Initial Catalog=StaffManagement;user id=sa; password=tola;MultipleActiveResultSets=True");
+            _connection = new SqlConnection("server=DESKTOP-D2JHR9D\\SQLEXPRESS;database=StaffManagement;user id=sa; password=tola;MultipleActiveResultSets=True");
         }
-        //[Route("submit")]
+        [Route("submit")]
         [HttpPost]
         public async Task<string> Register([FromBody] Dictionary<string, string> payload)
         {
             //TODO: save to database
-            /*
-             @First_Name nvarchar(50),
- @Last_Name nvarchar(50),
- @Bod nvarchar(20),
- @Education nvarchar(20),
- @Origin nvarchar (20),
- @Religion nvarchar (20)
-             */
+            
             using (var cmd = new SqlCommand ("Insert_Staff", _connection))
             {
                 cmd.CommandType = CommandType.StoredProcedure;
@@ -54,15 +47,18 @@ namespace Backend.Controllers
                     },
                     new SqlParameter
                     {
-                        ParameterName = "@Origin", SqlDbType = SqlDbType.NVarChar, Size = 20, Direction = ParameterDirection.Input, Value = payload["origin"]
+                        ParameterName = "@Origin", SqlDbType = SqlDbType.NVarChar, Size = 20, Direction = ParameterDirection.Input, Value = payload["soo"]
                     },
                     new SqlParameter
                     {
                         ParameterName = "@Religion", SqlDbType = SqlDbType.NVarChar, Size = 20, Direction = ParameterDirection.Input, Value = payload["religion"]
                     }
                 });
+                _connection.Open();
+                var row = await cmd.ExecuteNonQueryAsync();
+                return await Task.Run(() => row.ToString());
             }
-            return await Task.Run(()=> JsonSerializer.Serialize(payload));
+            
         }
         //[Route("submit")]
         [HttpGet]

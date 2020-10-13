@@ -22,6 +22,6 @@ export class RegisterComponent implements OnInit, OnDestroy
   {
   }
   public Submit() {
-
+    this.services.registerData(JSON.stringify(this.staff)).subscribe(d => console.log(d));
   }
 }
