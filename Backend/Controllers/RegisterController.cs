@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text.Json;
 using System.Threading.Tasks;
@@ -12,6 +13,11 @@ namespace Backend.Controllers
     [ApiController]
     public class RegisterController : ControllerBase
     {
+        private SqlConnection _connection;
+        public RegisterController()
+        {
+            _connection = new SqlConnection("DESKTOP-D2JHR9D\\SQLEXPRESS;Initial Catalog=StaffManagement;user id=sa; password=tola;MultipleActiveResultSets=True");
+        }
         //[Route("submit")]
         [HttpPost]
         public async Task<string> Register([FromBody] Dictionary<string, string> payload)
